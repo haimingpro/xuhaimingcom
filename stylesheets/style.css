@@ -1,0 +1,266 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background: #ffffff;
+  font-family: Arial,Georgia,'微软雅黑';
+  color: #3b3b3b;
+  font-size: 16px;
+}
+
+/*global*/
+.gray_pink {
+  color: #aba5a0;
+}
+
+/*layout*/
+#header {
+  position: relative;
+  width: 1401px;
+  height: 138px;
+  display: block;
+  background: #eceae9;
+}
+
+.top {
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 1px 14px 2px #787878;
+  width: 1401px;
+  left: 0;
+  top: 0;
+  height: 35px;
+  background: #d4d4d4;
+}
+.top span {
+  position: relative;
+  display: block;
+  float: left;
+  cursor: pointer;
+  width: 35px;
+  height: 36px;
+}
+.top span img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.logo_line {
+  position: relative;
+  padding: 50px 0 0 15px;
+  dispaly: block;
+}
+.logo_line p, .logo_line img, .logo_line div {
+  display: inline;
+}
+
+.topleft span {
+  margin-left: 10px;
+}
+
+.nav {
+  position: relative;
+  color: #ffffff;
+  float: right;
+  margin: 15px 230px 0 0;
+}
+.nav span {
+  color: #aba5a0;
+  padding: 0 16px 0 10px;
+}
+.nav span:hover {
+  color: #3b3b3b;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.language {
+  position: fixed;
+  top: 35px;
+  right: 3%;
+  z-index: 1001;
+  display: inline;
+  border-radius: 0 0 10px 10px;
+  background: #464645;
+  padding: 5px 12px;
+}
+.language span {
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.language span:hover {
+  color: #e5d244;
+}
+
+.content {
+  position: relative;
+  width: 1401px;
+}
+.content div.adipoli-wrapper {
+  cursor: pointer;
+}
+
+.sns {
+  margin-top: 20px;
+}
+.sns span {
+  width: 31px;
+  height: 22px;
+  float: left;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.sns span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#narumi {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  z-index: 99;
+}
+
+#banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#inner_content {
+  position: relative;
+  border-bottom: 46px solid #625f5d;
+  min-height: 375px;
+  background: #e5d244;
+}
+
+#inner_inner {
+  position: relative;
+  top: 30px;
+  left: 20%;
+  display: inline-block;
+}
+
+.pic_wrap {
+  background: url(../images/photbg.png) no-repeat;
+  display: block;
+  float: left;
+  margin-right: 60px;
+  width: 290px;
+  height: 242px;
+  padding: 29px 27px;
+}
+
+.txt_wrap {
+  float: left;
+}
+.txt_wrap ul li {
+  list-style: none;
+  color: #ffffff;
+}
+.txt_wrap h3 {
+  font-size: 26px;
+  font-family: Georgia;
+  margin-top: 10px;
+}
+.txt_wrap h4 {
+  font-size: 12px;
+  margin: 10px 0 24px 0;
+}
+.txt_wrap p {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+#footer {
+  position: fixed;
+  z-index: 1000;
+  width: 1401px;
+  bottom: 0;
+  left: 0;
+  height: 46px;
+  background: #625f5d;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+
+#copyright {
+  position: relative;
+  left: 30%;
+  top: 0;
+  padding: 15px 0 0 0;
+  width: 500px;
+}
+#copyright span {
+  margin-right: 10px;
+}
+
+/*media query*/
+/*pad*/
+/*small pad*/
+/*horizontal iphone5 568x320*/
+/*horizontal iphone4 480x320,large android*/
+/*Samsung Galaxy 380x685*/
+/*=====vertical iphone5 320x568=====*/
+/*-----small Android-----*/
+/*further small*/
