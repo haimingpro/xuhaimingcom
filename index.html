@@ -1,96 +1,122 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>XU HAIMING 徐海鸣个人网站</title>
-<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-<link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="stylesheets/adipoli.css" rel="stylesheet" type="text/css"/>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/jquery.adipoli.min.js"></script>
-<script src="js/Share.js"></script>
-<script src="js/scale.js"></script>
-<script src="js/Chinese.js"></script>
-<script src="js/Japanese.js"></script>
-<script src="js/English.js"></script>
-<script src="js/main.js"></script>
-</head>
-<body>
-	<div class="wrapper">
-		<div id="header">
-			<div id="top" class="top">
-				<span>
-					<img src="images/pc_on.jpg" />
-					<img class="btn_index" src="images/pc_off.jpg" />
-				</span>
-				<span>
-					<img src="images/mobile_on.jpg" />
-					<img class="btn_index" src="images/mobile_off.jpg"/>
-				</span>
-			</div>
-			<div id="js-language" class="language">
-				<span>cn</span>
-				<span>jp</span>
-				<span>en</span>
-			</div>
-			<div class="logo_line">
-				<p class="topleft">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>XU HAIMING 徐海鸣个人网站</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="stylesheets/adipoli.css" rel="stylesheet" type="text/css"/>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.adipoli.min.js"></script>
+		<script src="js/Share.js"></script>
+		<script src="js/scale.js"></script>
+		<script src="js/Chinese.js"></script>
+		<script src="js/Japanese.js"></script>
+		<script src="js/English.js"></script>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5shiv.js"></script>
+		<script type="text/javascript" src="js/respond.js"></script>
+		<![endif]-->
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header id="header">
+				<div id="top" class="top">
+					<span>
+						<img src="images/pc_on.jpg" />
+						<img class="btn_index" src="images/pc_off.jpg" />
+					</span>
+					<span>
+						<img src="images/mobile_on.jpg" />
+						<img class="btn_index" src="images/mobile_off.jpg"/>
+					</span>
+				</div>
+				<div id="js-language" class="language">
+					<span>cn</span>
+					<span>jp</span>
+					<span>en</span>
+				</div>
+				<div class="logo_line">
+					<p class="topleft">
 					<img src="images/logo.png" />
 					<div><span>徐海鸣 </span><span class="gray_pink">个人网站</span></div>
+					</p>
+					<p class="topright">
+					<nav id="js-nav">
+						<span></span>|
+						<span></span>|
+						<span></span>|
+						<span></span>|
+						<span></span>|
+					</nav>
+					</p>
+				</div>
+				<div class="menu_btn" id="js-menu"></div>
+			</header>
+			<menu id="js-down_menu">
+				<p>
+					<a></a>
 				</p>
-				<p class="topright">
-					<div class="nav" id="js-nav">
-						<span></span>|
-						<span></span>|
-						<span></span>|
-						<span></span>|
-						<span></span>|
-					</div>
+				<p>
+					<a></a>
 				</p>
-			</div>
-		</div>	
-		<div id="content" class="content">
-			<img id="narumi" src="images/narumi.png" />
-			<img id="banner" src="images/banner.jpg" />
-			<div id="inner_content">
-				<div id="inner_inner">
-					<div id="pic_wrap" class="pic_wrap">
-						<img id="pic" src="images/homepic.jpg" />
-					</div>
-					<div id="txt_wrap" class="txt_wrap">
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li class="sns">
-								<span class="btn_wrap">
-									<img src="images/sina_on.jpg"/>
-									<img id="js-sns_0" class="btn_index" src="images/sina_off.jpg"/>
-								</span>
-								<span class="btn_wrap">
-									<img src="images/tencent_on.jpg"/>
-									<img id="js-sns_1" class="btn_index" src="images/tencent_off.jpg"/>
-								</span>
-								<span class="btn_wrap">
-									<img src="images/kaixin_on.jpg"/>
-									<img id="js-sns_2" class="btn_index" src="images/kaixin_off.jpg"/>
-								</span>
-								<span class="btn_wrap">
-									<img src="images/renren_on.jpg"/>
-									<img id="js-sns_3" class="btn_index" src="images/renren_off.jpg"/>
-								</span>
-							</li>
-						</ul>
+				<p>
+					<a></a>
+				</p>
+				<p>
+					<a></a>
+				</p>
+				<p>
+					<span id="js-down_lan">
+						<a>JP</a>
+						<a>EN</a>
+						<a>CN</a>
+					</span>
+				</p>
+			</menu>
+			<section id="content" class="content">
+				<img id="narumi" src="images/narumi.png" />
+				<img id="banner" src="images/banner.jpg" />
+				<div id="inner_content">
+					<div id="inner_inner">
+						<div id="pic_wrap" class="pic_wrap">
+							<img id="pic" src="images/homepic.jpg" />
+						</div>
+						<div id="txt_wrap" class="txt_wrap">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li class="sns">
+									<span class="btn_wrap">
+										<img src="images/sina_on.jpg"/>
+										<img id="js-sns_0" class="btn_index" src="images/sina_off.jpg"/>
+									</span>
+									<span class="btn_wrap">
+										<img src="images/tencent_on.jpg"/>
+										<img id="js-sns_1" class="btn_index" src="images/tencent_off.jpg"/>
+									</span>
+									<span class="btn_wrap">
+										<img src="images/kaixin_on.jpg"/>
+										<img id="js-sns_2" class="btn_index" src="images/kaixin_off.jpg"/>
+									</span>
+									<span class="btn_wrap">
+										<img src="images/renren_on.jpg"/>
+										<img id="js-sns_3" class="btn_index" src="images/renren_off.jpg"/>
+									</span>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
+			</section>
+			<footer id="footer">
+				<p id="copyright" class="gray_pink"><span>©2014</span><span>by</span>XuHaiming personal Site xuhaiming.com</p>
+			</footer>
 		</div>
-		<div id="footer">
-			<p id="copyright" class="gray_pink"><span>©2014</span><span>by</span>XuHaiming personal Site xuhaiming.com</p>
-		</div>
-	</div>
-<script>
-	start();
-</script>
-</body>
+		<script>
+			start();
+		</script>
+	</body>
 </html>

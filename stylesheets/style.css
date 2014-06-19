@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,12 +65,16 @@ body {
   font-size: 16px;
 }
 
-/*global*/
+/*------------------------------------*\
+    $GLOBAL
+\*------------------------------------*/
 .gray_pink {
   color: #aba5a0;
 }
 
-/*layout*/
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
 #header {
   position: relative;
   width: 1401px;
@@ -102,8 +109,8 @@ body {
 
 .logo_line {
   position: relative;
-  padding: 50px 0 0 15px;
-  dispaly: block;
+  padding: 50px 0px 10px 15px;
+  display: block;
 }
 .logo_line p, .logo_line img, .logo_line div {
   display: inline;
@@ -113,20 +120,67 @@ body {
   margin-left: 10px;
 }
 
-.nav {
+nav {
   position: relative;
   color: #ffffff;
   float: right;
   margin: 15px 230px 0 0;
 }
-.nav span {
+nav span {
   color: #aba5a0;
   padding: 0 16px 0 10px;
 }
-.nav span:hover {
+nav span:hover {
   color: #3b3b3b;
   text-decoration: underline;
   cursor: pointer;
+}
+
+menu {
+  position: relative;
+  font-size: 16px;
+  z-index: 99999;
+  background-color: #4d4d4d;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  clear: both;
+  display: none;
+}
+menu p {
+  height: 58px;
+  line-height: 58px;
+  margin: 0 10px;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+menu p span {
+  width: 150px;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+}
+menu p span a {
+  color: #000;
+  font-size: 14px;
+  line-height: 25px;
+  padding: 0 10px;
+}
+menu p:last-child {
+  border: none;
+}
+
+.menu_btn {
+  width: 44px;
+  height: 44px;
+  display: block;
+  background: url(../images/menu_off.jpg) no-repeat;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  float: right;
 }
 
 .language {
@@ -135,6 +189,10 @@ body {
   right: 3%;
   z-index: 1001;
   display: inline;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -ms-border-radius: 0 0 10px 10px;
+  -o-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
   background: #464645;
   padding: 5px 12px;
@@ -255,12 +313,36 @@ body {
   margin-right: 10px;
 }
 
-/*media query*/
-/*pad*/
-/*small pad*/
-/*horizontal iphone5 568x320*/
-/*horizontal iphone4 480x320,large android*/
-/*Samsung Galaxy 380x685*/
-/*=====vertical iphone5 320x568=====*/
-/*-----small Android-----*/
-/*further small*/
+/*------------------------------------*\
+    $MIXIN
+\*------------------------------------*/
+/*------------------------------------*\
+    $MEDIA QUERY
+\*------------------------------------*/
+@media screen and (max-width: 320px) {
+  nav {
+    display: none;
+  }
+
+  .menu_btn {
+    display: block;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  nav {
+    display: none;
+  }
+
+  .menu_btn {
+    display: block;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .menu_btn {
+    display: block;
+  }
+}
