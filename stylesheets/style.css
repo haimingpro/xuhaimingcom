@@ -1,7 +1,7 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    $RESET
-\*------------------------------------*/
+/* ------------------------------------*\
+$RESET
+\*------------------------------------ */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,23 +60,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   background: #ffffff;
-  font-family: Arial,Georgia,'微软雅黑';
+  font-family: Arial, Georgia, '微软雅黑';
   color: #3b3b3b;
   font-size: 16px;
 }
 
-/*------------------------------------*\
-    $GLOBAL
-\*------------------------------------*/
+/* ------------------------------------*\
+$GLOBAL
+\*------------------------------------ */
 .gray_pink {
   color: #aba5a0;
 }
 
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
+/* ------------------------------------*\
+$LAYOUT
+\*------------------------------------ */
 .wrapper {
-  overflow: hidden;
+  display: inline-block;
 }
 
 #header {
@@ -226,14 +226,17 @@ menu p:last-child {
 
 .content {
   position: relative;
-  width: 1401px;
+  width: 100%;
 }
 .content div.adipoli-wrapper {
   cursor: pointer;
 }
 
 .sns {
+  position: relative;
   margin-top: 20px;
+  height: 60px;
+  display: inline-block;
 }
 .sns span {
   width: 31px;
@@ -267,10 +270,12 @@ menu p:last-child {
   border-bottom: 46px solid #625f5d;
   min-height: 375px;
   background: #e5d244;
+  display: inline-block;
 }
 
 #inner_inner {
   position: relative;
+  width: 100%;
   top: 30px;
   left: 20%;
   display: inline-block;
@@ -310,7 +315,7 @@ menu p:last-child {
 #footer {
   position: fixed;
   z-index: 1000;
-  width: 1401px;
+  width: 100%;
   bottom: 0;
   left: 0;
   height: 46px;
@@ -325,18 +330,18 @@ menu p:last-child {
   left: 30%;
   top: 0;
   padding: 15px 0 0 0;
-  width: 500px;
+  width: 100%;
 }
 #copyright span {
   margin-right: 10px;
 }
 
-/*------------------------------------*\
-    $MIXIN
-\*------------------------------------*/
-/*------------------------------------*\
-    $MEDIA QUERY
-\*------------------------------------*/
+/* ------------------------------------*\
+$MIXIN
+\*------------------------------------ */
+/* ------------------------------------*\
+$MEDIA QUERY
+\*------------------------------------ */
 @media screen and (max-width: 320px) {
   nav {
     display: none;
