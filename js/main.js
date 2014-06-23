@@ -32,7 +32,7 @@ function windowSize(){
 	document.getElementById("top").style.width=_width+"px";
 	document.getElementById("content").style.width=_width+"px";//relative
 	document.getElementById("inner_content").style.width=_width+"px";//absolute with bg
-	document.getElementById("inner_content").style.top=sizeArr[1]+37+"px";
+	document.getElementById("inner_content").style.top=sizeArr[1]+"px";
     document.getElementById("inner_inner").style.left=(_left-514)/2-210<0?0:(_left-514)/2-210+"px";
 	document.getElementById("footer").style.width=_width+"px";	
 	document.getElementById("copyright").style.left=(_left-514)/2+"px";
@@ -153,6 +153,7 @@ function startModify(str){
 	var language_class=language_switch(str);
 	for(var i=0; i<5; i++){
 		$("#js-nav").find("span").eq(i).html(language_class.all.top[i]);
+		$("#js-down_menu").find("p").eq(i).find("a").html(language_class.all.top[i]);
 	}
 	for(var i=0; i<3; i++){
 		$("#txt_wrap li").eq(i).html(language_class.home.content[i]);

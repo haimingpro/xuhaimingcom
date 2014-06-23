@@ -153,6 +153,9 @@ menu p {
   border-bottom: 1px solid #fff;
   text-align: center;
 }
+menu p a {
+  color: #fff;
+}
 menu p span {
   width: 150px;
   height: 25px;
@@ -172,7 +175,7 @@ menu p:last-child {
 .menu_btn {
   width: 44px;
   height: 44px;
-  display: block;
+  display: none;
   background: url(../images/menu_off.jpg) no-repeat;
   border: 1px solid #ffffff;
   -webkit-border-radius: 10px;
@@ -186,7 +189,7 @@ menu p:last-child {
 .language {
   position: fixed;
   top: 35px;
-  right: 3%;
+  right: 7%;
   z-index: 1001;
   display: inline;
   -webkit-border-radius: 0 0 10px 10px;
@@ -204,6 +207,17 @@ menu p:last-child {
 }
 .language span:hover {
   color: #e5d244;
+}
+
+.transparent {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  height: 27px;
+  display: block;
+  background-color: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
 }
 
 .content {
