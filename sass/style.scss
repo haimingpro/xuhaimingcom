@@ -12,6 +12,7 @@ body{ background:#ffffff; font-family:Arial,Georgia,'微软雅黑'; color:#3b3b3
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
+.wrapper{overflow:hidden;}
 #header{position:relative; width:1401px; height:138px; display:block; background:#eceae9;}
 .top{
 	position:fixed; z-index:1000; 
@@ -147,6 +148,7 @@ menu{
 @mixin hidenav{
 	nav{display: none;}
 	.menu_btn{display: block;}
+	.txt_wrap{ padding-left: 30px;}
 }
 /*------------------------------------*\
     $MEDIA QUERY

@@ -75,6 +75,10 @@ body {
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
+.wrapper {
+  overflow: hidden;
+}
+
 #header {
   position: relative;
   width: 1401px;
@@ -341,6 +345,10 @@ menu p:last-child {
   .menu_btn {
     display: block;
   }
+
+  .txt_wrap {
+    padding-left: 30px;
+  }
 }
 @media screen and (min-width: 321px) and (max-width: 480px) {
   nav {
@@ -350,6 +358,10 @@ menu p:last-child {
   .menu_btn {
     display: block;
   }
+
+  .txt_wrap {
+    padding-left: 30px;
+  }
 }
 @media screen and (min-width: 481px) and (max-width: 900px) {
   nav {
@@ -358,5 +370,9 @@ menu p:last-child {
 
   .menu_btn {
     display: block;
+  }
+
+  .txt_wrap {
+    padding-left: 30px;
   }
 }
