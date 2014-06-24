@@ -15,13 +15,25 @@ function start(){
 	  'boxRows':'6',
 	  'animSpeed':'100'
     });
+    agentBtns();
     btnEff();
-    windowInit()
+    windowInit();
 }
 function windowSize(){
     $(window).bind('resize',(function() {
     	windowInit();
+    	agentBtns();
     }));
+}
+function agentBtns(){
+	if($(window).width()>=900){
+    		btnFadeOut(".top span",0);
+    		btnFadeIn(".top span",1);
+    	}
+    	else{
+    		btnFadeOut(".top span",1);
+    		btnFadeIn(".top span",0);
+    	}
 }
 function windowInit(){
 	newArr=[$(window).width(),$(window).height()];  	
@@ -44,17 +56,15 @@ function btnFadeOut(_id,_i){
 function btnFadeIn(_id,_i){
 	$(_id).eq(_i).find("img").eq(1).stop().animate({"opacity":"1"},500);
 }
+function mouseOvr(_div,_i){
+	$(_div).eq(_i).mouseenter(function(){
+		btnFadeOut(_div,_i);		
+	});
+	$(_div).eq(_i).mouseleave(function(){
+		btnFadeIn(_div,_i);
+	});
+}
 function btnEff(){
-	for(var i=0; i<2; i++){
-		(function(i){
-			$(".top span").eq(i).mouseover(function(){
-				btnFadeOut(".top span",i);		
-			});
-			$(".top span").eq(i).mouseout(function(){
-				btnFadeIn(".top span",i);
-			});
-		})(i);
-	}
 	$("#js-menu").click(function(){
 		if($("#js-down_menu").is(":visible")){
 			$("#js-down_menu").slideUp(500);
@@ -66,12 +76,7 @@ function btnEff(){
 	});
 	for(var i=0; i<4; i++){
 		(function(i){
-			$(".sns span").eq(i).mouseover(function() {
-				btnFadeOut(".sns span",i);
-			});
-			$(".sns span").eq(i).mouseout(function() {
-				btnFadeIn(".sns span",i);
-			});
+			mouseOvr(".sns span",i);
 			$(".sns span").eq(i).click(function() {
 				switch (i){
 					case 0 :
@@ -95,7 +100,6 @@ function language_btnInit(){
 	$("#js-language span").eq(0).css({"display":"none"});
 	$("#js-language span").eq(1).css({"display":"none"});
 }
-
 function language_btnEff(){
 	for(var i=0; i<3; i++){
 		(function(i){
@@ -120,19 +124,28 @@ function language_btnEff(){
 				});
 
 			});
-			$("#js-language span").eq(i).click(function() {
-				_lan =i;
-				startModify(_language_arr[_lan]);
-				for(j=0; j<3; j++){
-					if(j!=i){
-						$("#js-language span").eq(j).css({"display":"none"});
-					}
-				}
-			});
+			languageClick("#js-down_lan a",i);
+			languageClick("#js-language span",i);
 		})(i);
 	}
 }
-
+function languageClick(_div,_i){
+	$(_div).eq(_i).click(function() {
+				_lan =_i;
+				startModify(_language_arr[_lan]);
+				for(j=0; j<3; j++){
+					if(j!=_i){
+						if(_div=="js-language span"){
+							$(_div).eq(j).css({"display":"none"});
+						}
+						else{
+							$(_div).eq(j).css({"color":"#000"});
+							$(_div).eq(_i).css({"color":"#eeeeee"});
+						}
+					}
+				}
+			});
+}
 function language_switch(language){
 	switch(language){
 		case "cn":

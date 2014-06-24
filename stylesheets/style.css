@@ -101,7 +101,6 @@ $LAYOUT
   position: relative;
   display: block;
   float: left;
-  cursor: pointer;
   width: 35px;
   height: 36px;
 }
