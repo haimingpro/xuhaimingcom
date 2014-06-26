@@ -211,6 +211,7 @@ menu {
 }
 .txt_wrap {
 	float: left;
+	padding-left:0;
 	ul li {
 		list-style: none;
 		color: #ffffff;
@@ -243,10 +244,9 @@ menu {
 }
 #copyright {
 	position: relative;
-	left: 30%;
 	top: 0;
 	padding: 15px 0 0 0;
-	width: 100%;
+	width: 40%;
 	span {
 		margin-right: 10px;
 	}
@@ -264,6 +264,7 @@ $MIXIN
 	}
 	.txt_wrap {
 		padding-left: 30px;
+		width:90%;
 	}
 }
 
@@ -281,6 +282,14 @@ $MEDIA QUERY
 	@include hidenav;
 }
 @include screen(901px, 1024px) {
+	.txt_wrap {
+		padding-left: 30px;
+		width:43%;
+	}
 }
 @include min-screen(1025px) {
+	.txt_wrap {
+		padding-left: 30px;
+		width:52%;
+	}
 }

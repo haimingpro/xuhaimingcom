@@ -292,6 +292,7 @@ menu p:last-child {
 
 .txt_wrap {
   float: left;
+  padding-left: 0;
 }
 .txt_wrap ul li {
   list-style: none;
@@ -326,10 +327,9 @@ menu p:last-child {
 
 #copyright {
   position: relative;
-  left: 30%;
   top: 0;
   padding: 15px 0 0 0;
-  width: 100%;
+  width: 40%;
 }
 #copyright span {
   margin-right: 10px;
@@ -352,6 +352,7 @@ $MEDIA QUERY
 
   .txt_wrap {
     padding-left: 30px;
+    width: 90%;
   }
 }
 @media screen and (min-width: 321px) and (max-width: 480px) {
@@ -365,6 +366,7 @@ $MEDIA QUERY
 
   .txt_wrap {
     padding-left: 30px;
+    width: 90%;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 900px) {
@@ -378,5 +380,18 @@ $MEDIA QUERY
 
   .txt_wrap {
     padding-left: 30px;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1024px) {
+  .txt_wrap {
+    padding-left: 30px;
+    width: 43%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .txt_wrap {
+    padding-left: 30px;
+    width: 52%;
   }
 }
