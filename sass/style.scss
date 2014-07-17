@@ -16,7 +16,9 @@ $GLOBAL
 .gray_pink {
 	color: #aba5a0;
 }
-
+/* ------------------------------------*\
+$MIXIN for Layout
+\*------------------------------------ */
 /* ------------------------------------*\
 $LAYOUT
 \*------------------------------------ */
@@ -24,7 +26,7 @@ $LAYOUT
 	display: inline-block;
 	//overflow: hidden;
 }
-#header {
+header {
 	position: relative;
 	width: 1401px;
 	height: 138px;
@@ -175,43 +177,42 @@ menu {
 		}
 	}
 }
-#narumi {
+.narumi {
 	position: absolute;
 	top: 0;
 	left: 30%;
 	z-index: 99;
 }
-#banner {
+.banner {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
-#inner_content {
+.inner_content {
 	position: relative;
 	border-bottom: 46px solid #625f5d;
 	min-height: 375px;
 	background: #e5d244;
 	display: inline-block;
 }
-#inner_inner {
+.inner_inner {
 	position: relative;
 	width: 100%;
 	top: 30px;
-	left: 20%;
 	display: inline-block;
+	overflow: hidden;
 }
 .pic_wrap {
 	background: url(../images/photbg.png) no-repeat;
 	display: block;
 	float: left;
-	margin-right: 60px;
 	width: 290px;
 	height: 242px;
 	padding: 29px 27px;
 }
 .txt_wrap {
 	float: left;
-	padding-left:0;
+	padding-left: 30px;
 	ul li {
 		list-style: none;
 		color: #ffffff;
@@ -230,7 +231,7 @@ menu {
 		letter-spacing: 1px;
 	}
 }
-#footer {
+footer {
 	position: fixed;
 	z-index: 1000;
 	width: 100%;
@@ -242,18 +243,22 @@ menu {
 	-moz-opacity: 0.9;
 	opacity: 0.9;
 }
-#copyright {
+.copyright {
 	position: relative;
 	top: 0;
 	padding: 15px 0 0 0;
-	width: 40%;
+	width: 90%;
+	overflow: hidden;
 	span {
 		margin-right: 10px;
+	}
+	i{
+			display: inline;
 	}
 }
 
 /* ------------------------------------*\
-$MIXIN
+$MIXIN for Meida Query
 \*------------------------------------ */
 @mixin hidenav {
 	nav {
@@ -262,23 +267,35 @@ $MIXIN
 	.menu_btn {
 		display: block;
 	}
+}
+@mixin splitTwo {
 	.txt_wrap {
-		padding-left: 30px;
+		padding-left:0;
 		width:90%;
 	}
+	.copyright{
+		i{
+			display: none;
+		}
+	}
 }
-
 /* ------------------------------------*\
 $MEDIA QUERY
 \*------------------------------------ */
 @import "media-queries";
-@include max-screen(320px) {
+@include max-screen(321px) {
 	@include hidenav;
+	@include splitTwo;
 }
-@include screen(321px, 480px) {
+@include screen(322px, 480px) {
 	@include hidenav;
+	@include splitTwo;
 }
-@include screen(481px, 900px) {
+@include screen(481px, 760px) {
+	@include hidenav;
+	@include splitTwo;
+}
+@include screen(761px, 900px) {
 	@include hidenav;
 }
 @include screen(901px, 1024px) {

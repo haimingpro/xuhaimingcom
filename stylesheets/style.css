@@ -73,13 +73,16 @@ $GLOBAL
 }
 
 /* ------------------------------------*\
+$MIXIN for Layout
+\*------------------------------------ */
+/* ------------------------------------*\
 $LAYOUT
 \*------------------------------------ */
 .wrapper {
   display: inline-block;
 }
 
-#header {
+header {
   position: relative;
   width: 1401px;
   height: 138px;
@@ -251,20 +254,20 @@ menu p:last-child {
   left: 0;
 }
 
-#narumi {
+.narumi {
   position: absolute;
   top: 0;
   left: 30%;
   z-index: 99;
 }
 
-#banner {
+.banner {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#inner_content {
+.inner_content {
   position: relative;
   border-bottom: 46px solid #625f5d;
   min-height: 375px;
@@ -272,19 +275,18 @@ menu p:last-child {
   display: inline-block;
 }
 
-#inner_inner {
+.inner_inner {
   position: relative;
   width: 100%;
   top: 30px;
-  left: 20%;
   display: inline-block;
+  overflow: hidden;
 }
 
 .pic_wrap {
   background: url(../images/photbg.png) no-repeat;
   display: block;
   float: left;
-  margin-right: 60px;
   width: 290px;
   height: 242px;
   padding: 29px 27px;
@@ -292,7 +294,7 @@ menu p:last-child {
 
 .txt_wrap {
   float: left;
-  padding-left: 0;
+  padding-left: 30px;
 }
 .txt_wrap ul li {
   list-style: none;
@@ -312,7 +314,7 @@ menu p:last-child {
   letter-spacing: 1px;
 }
 
-#footer {
+footer {
   position: fixed;
   z-index: 1000;
   width: 100%;
@@ -325,23 +327,27 @@ menu p:last-child {
   opacity: 0.9;
 }
 
-#copyright {
+.copyright {
   position: relative;
   top: 0;
   padding: 15px 0 0 0;
-  width: 40%;
+  width: 90%;
+  overflow: hidden;
 }
-#copyright span {
+.copyright span {
   margin-right: 10px;
+}
+.copyright i {
+  display: inline;
 }
 
 /* ------------------------------------*\
-$MIXIN
+$MIXIN for Meida Query
 \*------------------------------------ */
 /* ------------------------------------*\
 $MEDIA QUERY
 \*------------------------------------ */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
   nav {
     display: none;
   }
@@ -351,11 +357,15 @@ $MEDIA QUERY
   }
 
   .txt_wrap {
-    padding-left: 30px;
+    padding-left: 0;
     width: 90%;
+  }
+
+  .copyright i {
+    display: none;
   }
 }
-@media screen and (min-width: 321px) and (max-width: 480px) {
+@media screen and (min-width: 322px) and (max-width: 480px) {
   nav {
     display: none;
   }
@@ -365,11 +375,15 @@ $MEDIA QUERY
   }
 
   .txt_wrap {
-    padding-left: 30px;
+    padding-left: 0;
     width: 90%;
+  }
+
+  .copyright i {
+    display: none;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 760px) {
   nav {
     display: none;
   }
@@ -379,8 +393,21 @@ $MEDIA QUERY
   }
 
   .txt_wrap {
-    padding-left: 30px;
+    padding-left: 0;
     width: 90%;
+  }
+
+  .copyright i {
+    display: none;
+  }
+}
+@media screen and (min-width: 761px) and (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .menu_btn {
+    display: block;
   }
 }
 @media screen and (min-width: 901px) and (max-width: 1024px) {
