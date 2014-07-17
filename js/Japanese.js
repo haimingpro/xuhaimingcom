@@ -4,12 +4,11 @@ var Japanese_Language = {
            "top":["マイページ","プロフィール","生活","ブログ","連絡先"]
        },
        "home":{
-    		"content":["<h3>“People Who Love To Program<br />Are Always The Cleverest People”<h3>",
-           			"<h4>-Xu Haiming-</h4>",
-           			"<p>I’m a Front End Programmer.</p>"+
-					"<p>Working with Javascript and html/css everyday.</p>"+
-					"<p>We work with computers because they are the medium that is best capable of transmitting<br />"+
-					"some feelings that you have,you want to<br />share with other people.</p>"]
+    		"content":["<h3>“プログラミングに興味を持つ人は<br />一番スマート人”<h3>",
+           			"<h4>-鳴海-</h4>",
+           			"<p>私はウェブフロントエンドプログラマーです。</p>"+
+					"<p>毎日jsとcssなどと書いています。</p>"+
+					"<p>我々は、コンピュータと一緒に働くことを仕事に選んだ、その原因は、これは自分の感情を投射する、他人とシェアすることができる最高の媒体であるのです。</p>"]
        
 	   },
 	   "profile":{

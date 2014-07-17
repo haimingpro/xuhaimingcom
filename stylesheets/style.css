@@ -138,7 +138,6 @@ nav span {
 }
 nav span:hover {
   color: #3b3b3b;
-  text-decoration: underline;
   cursor: pointer;
 }
 

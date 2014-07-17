@@ -99,6 +99,29 @@ HOME.BtnEff = function(){
 		});
 	},
 	clickEvents = function(){
+		for (var i=0; i<5; i++){
+			(function(i){
+				$("#js-nav").find("span").eq(i).click(function(){
+					switch (i){
+						case 0 :
+							window.open("http://xuhaiming.com","_self");
+						break;
+						case 1 :
+							window.open("http://stackoverflow.com/users/1402372/meeming","_blank");
+						break;
+						case 2 :
+							window.open("http://weibo.com/haimingpro","_blank");
+						break;
+						case 3 :
+							window.open("http://www.cnblogs.com/haimingpro","_blank");
+						break;
+						case 4 :
+							window.open("http://user.qzone.qq.com/358695188","_blank");
+						break;
+					}
+				});
+			})(i);
+		}
 		$("#js-menu").click(function(){
 			if($("#js-down_menu").is(":visible")){
 				$("#js-down_menu").slideUp(500);
