@@ -160,6 +160,7 @@ menu p {
 }
 menu p a {
   color: #fff;
+  text-decoration: none;
 }
 menu p span {
   width: 150px;

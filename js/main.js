@@ -168,6 +168,7 @@ HOME.Lan = function(){
 	language_btnInit = function(){
 		$("#js-language span").eq(0).css({"display":"none"});
 		$("#js-language span").eq(1).css({"display":"none"});
+		$("#js-down_lan a").eq(2).css({"color":"#eeeeee"});
 	},
 	language_btnEff = function(){
 		for(var i=0; i<3; i++){
@@ -176,22 +177,19 @@ HOME.Lan = function(){
 					$("#js-language").find("span").css({"display":"block","float":"left"});
 				});
 				$("#js-language").mouseleave(function() {
-
 					$("#js-language").find("span").css({
 						"display": "none"
 					});
 					for (j = 0; j < 3; j++) {
-						if (j != _lan) {
+						if (j !== _lan) {
 							$("#js-language span").eq(j).css({
 								"display": "none"
 							});
 						}
 					}
-
 					$("#js-language").find("span").eq(_lan).css({
 						"display": "block"
 					});
-
 				});
 				languageClick("#js-down_lan a",i);
 				languageClick("#js-language span",i);
@@ -203,17 +201,12 @@ HOME.Lan = function(){
 				_lan =_i;
 				startModify(_language_arr[_lan]);
 				for(j=0; j<3; j++){
-					if(j!=_i){
-						if(_div=="js-language span"){
-							$(_div).eq(j).css({"display":"none"});
-						}
-						else if(_div=="js-down_lan"){
-							$(_div).eq(j).css({"color":"#000"});
-							$(_div).eq(_i).css({"color":"#eeeeee"});
-						}
-					}
+					$("#js-language span").eq(j).css({"display":"none"});
+					$("#js-language span").eq(_lan).css({"display":"block"});
+					$("#js-down_lan a").eq(j).css({"color":"#000"});
+					$("#js-down_lan a").eq(_lan).css({"color":"#eee"});
 				}
-			});	
+		});	
 	},
 	language_switch = function(language){
 		switch(language){
