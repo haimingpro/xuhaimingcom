@@ -1,4 +1,4 @@
-var HOME = HOME || {};
+var PRO = PRO || {};
 var _language_arr = ["cn", "jp", "en"];
 var sizeArr = [];
 var shareText = "We work with computers because they are the medium that is best capable of transmitting some feelings that you have,you want to share with other people.";
@@ -10,25 +10,16 @@ if (typeof _lan === "undefined") {
 	}
 };
 
-HOME.init = function() {
-	new HOME.Respond();
-	new HOME.BtnEff();
-	new HOME.Lan();
+PRO.init = function() {
+	new PRO.Respond();
+	new PRO.BtnEff();
+	new PRO.Lan();
 }
-HOME.Respond = function() {
+PRO.Respond = function() {
 	api = {
 			init: function() {
 				windowSize();
 				windowInit();
-				if (typeof nowPage === "undefined") {
-					$('#js-pic').adipoli({
-						'startEffect': 'grayscale',
-						'hoverEffect': 'boxRainGrow',
-						'boxCols': '9',
-						'boxRows': '6',
-						'animSpeed': '100'
-					});
-				}
 			}
 		},
 		windowSize = function() {
@@ -54,10 +45,6 @@ HOME.Respond = function() {
 			var _innerL = (_left - _width) / 2 - 210 < 0 ? 0 : (_left - _width) / 2 - 210;
 			$("#js-header,#js-top,#js-content,#js-inner_content").css({
 				"width": sizeArr[0] + "px"
-			});
-
-			$("#js-inner_content").css({
-				"top": sizeArr[1] + "px"
 			});
 
 			$("#js-banner").css({
@@ -97,7 +84,7 @@ HOME.Respond = function() {
 		}
 	return api.init();
 }
-HOME.BtnEff = function() {
+PRO.BtnEff = function() {
 	api = {
 			init: function() {
 				agentBtns();
@@ -195,7 +182,7 @@ HOME.BtnEff = function() {
 		}
 	return api.init();
 }
-HOME.Lan = function() {
+PRO.Lan = function() {
 	api = {
 			init: function() {
 				language_btnInit();
@@ -289,7 +276,7 @@ HOME.Lan = function() {
 				$("#js-down_menu").find("p").eq(i).find("a").html(language_class.all.top[i]);
 			}
 			for (var i = 0; i < 3; i++) {
-				$("#js-txt_wrap li").eq(i).html(language_class.home.content[i]);
+				$("#js-txt_wrap li").eq(i).html(language_class.profile.content[i]);
 			}
 		}
 	return api.init();
