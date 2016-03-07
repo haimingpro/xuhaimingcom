@@ -211,6 +211,14 @@ HOME.Lan = function() {
 			$("#js-down_lan a").eq(_lan).css({
 				"color": "#eeeeee"
 			});
+			// if (_lan === 1) {
+			// 	$("#js-language span").eq(_lan + 1).css({
+			// 		"display": "none"
+			// 	});
+			// 	$("#js-language span").eq(_lan - 1).css({
+			// 		"display": "none"
+			// 	});
+			// } else {
 			lan = _lan + 1 >= 2 ? 0 : _lan + 1;
 			$("#js-language span").eq(lan).css({
 				"display": "none"
@@ -219,6 +227,7 @@ HOME.Lan = function() {
 			$("#js-language span").eq(lan).css({
 				"display": "none"
 			});
+			// }
 		},
 		language_btnEff = function() {
 			for (var i = 0; i < 3; i++) {
