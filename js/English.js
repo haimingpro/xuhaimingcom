@@ -17,13 +17,13 @@ var English_Language = {
     				
            			"<h4 style='line-height:30px'>Work in PEST, Cloud Dept. Front-End Developer</h4>",
            			
-           			"<p>Summer-born 1983 in Changsha.</p><br />"+
+           			"<p>Summer-born in Changsha 1983.</p><br />"+
            			
 					"<p>Ancestral hometown: NingBo, Living in Shanghai.</p><br />"+
 					
-					"<p><span style='line-height:30px; word-wrap: break-word;'>Went to Yuhuating primary school, 21th and 6th High School"+
+					"<p><span style='line-height:30px; word-wrap: break-word;'>Went to Yuhuating primary school, 21th and 6th High School, "+
 					
-					"Got associate degree from National Higher-education self-learning Examination in Computer Application Technology.</span></p>"]  
+					"National Higher-education self-learning Examination in Computer Application Technology.</span></p>"]  
 	   },
 	   "life":{
 
